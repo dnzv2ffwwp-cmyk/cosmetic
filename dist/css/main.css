@@ -5,7 +5,7 @@
   --green: #292e17;
   --serif: Georgia, "Times New Roman", serif;
   --gutter: clamp(18px, 4.3vw, 72px);
-  font-family: Pretendard, "Apple SD Gothic Neo", sans-serif;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
   color: var(--ink);
   background: var(--paper);
   scroll-behavior: smooth;
@@ -75,7 +75,14 @@ img { display: block; width: 100%; }
 .brand img { min-height: 300px; height: 100%; object-fit: cover; }
 .brand > div { align-self: center; padding: clamp(27px, 7vw, 115px); }
 .brand h2 { margin-block: 15px; font-size: clamp(27px, 3.3vw, 53px); letter-spacing: -.07em; line-height: 1.2; }
-.brand p:last-child { max-width: 34ch; line-height: 1.65; }
+.brand h2 ~ p {
+  max-width: 24em;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.brand h2 ~ p + p { margin-top: 0.75em; }
 .journal-grid summary { cursor: pointer; list-style: none; }
 .journal-grid summary::-webkit-details-marker { display: none; }
 .journal-grid summary img { aspect-ratio: 1.48; object-fit: cover; }
