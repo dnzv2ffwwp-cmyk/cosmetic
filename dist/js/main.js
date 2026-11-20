@@ -18,7 +18,7 @@ const query = dialog.querySelector("input");
 const status = dialog.querySelector(".search-status");
 const results = dialog.querySelector(".search-results");
 const products = [...document.querySelectorAll(".product")].map((product) => ({
-  id: product.id,
+  href: product.querySelector(".product-link")?.getAttribute("href") ?? `#${product.id}`,
   name: product.querySelector("h3").textContent,
 }));
 const normalize = (text) => text.normalize("NFC").replace(/\s+/g, "").toLowerCase();
@@ -28,10 +28,10 @@ function updateResults() {
   const matches = products.filter(({ name }) => normalize(name).includes(term));
 
   status.textContent = matches.length ? `${matches.length}개 제품` : "검색 결과가 없습니다.";
-  results.replaceChildren(...matches.map(({ id, name }) => {
+  results.replaceChildren(...matches.map(({ href, name }) => {
     const item = document.createElement("li");
     const link = document.createElement("a");
-    link.href = `#${id}`;
+    link.href = href;
     link.textContent = name;
     item.append(link);
     return item;

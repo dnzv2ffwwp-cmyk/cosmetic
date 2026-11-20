@@ -27,29 +27,34 @@
 <body id="top">
   <a class="skip" href="#main">본문 바로가기</a>
   <div class="announcement">sunmin의 첫 번째 스킨케어 컬렉션을 만나보세요.</div>
-  <header class="site-header wide">
-    <a class="wordmark" href="#top" aria-label="sunmin 홈">sunmin</a>
-    <nav aria-label="주 메뉴">
-      <a href="#collection">컬렉션</a>
-      <a href="#edits">기획전</a>
-      <a href="#journal">저널</a>
-      <a href="#brand">브랜드</a>
-    </nav>
-    <button class="search-trigger" type="button" aria-haspopup="dialog" aria-label="제품 검색">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-    </button>
+  <header class="site-header-shell">
+    <div class="site-header wide">
+      <a class="wordmark" href="#top" aria-label="sunmin 홈">sunmin</a>
+      <nav aria-label="주 메뉴">
+        <a href="#collection">컬렉션</a>
+        <a href="#edits">기획전</a>
+        <a href="#journal">저널</a>
+        <a href="#brand">브랜드</a>
+      </nav>
+      <button class="search-trigger" type="button" aria-haspopup="dialog" aria-label="제품 검색">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </button>
+    </div>
   </header>
 
   <main id="main">
     <section class="showcase wide" aria-label="컬렉션 하이라이트">
       <div class="hero">
-        <article class="slide is-active" aria-label="그린 듀 세럼">
-          <img src="assets/images/hero.jpg" alt="" fetchpriority="high">
+        <article class="slide slide-forest" aria-label="고요한 숲에서 영감을 받은 세럼">
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/banner/mo-hero%20banner.jpg">
+            <source media="(max-width: 1100px)" srcset="assets/banner/pad-hero%20banner.jpg">
+            <img src="assets/banner/pc-hero%20banner.jpg" width="1920" height="800" alt="" fetchpriority="high">
+          </picture>
           <div class="hero-copy">
-            <p class="eyebrow">GREEN DEW COLLECTION</p>
-            <h1>피부에 닿는<br>싱그러운 이슬</h1>
-            <p>하루를 가볍게 여는 그린 듀 세럼</p>
-            <a href="#serum">제품 만나보기 <span aria-hidden="true">↗</span></a>
+            <h1 lang="en">Inspired by the<br>Quiet of the Forest</h1>
+            <p>고요한 숲에서 영감을 받은 세럼</p>
+            <a href="moss-veil-serum.html">제품 만나보기 <span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="slide slide-light" hidden aria-label="카렌듈라 소프트 크림">
@@ -78,19 +83,18 @@
           </div>
         </div>
       </div>
-      <div class="shortcuts">
-        <a href="#edits"><img src="assets/images/cream-edit.jpg" alt=""><span>Ritual Sets <small>기획전</small></span><b aria-hidden="true">↗</b></a>
-        <a href="#journal"><img src="assets/images/texture.jpg" alt=""><span>The Journal <small>스킨케어 저널</small></span><b aria-hidden="true">↗</b></a>
-        <a href="#brand"><img src="assets/images/portrait.jpg" alt=""><span>Design Process<small>제작과정</small></span><b aria-hidden="true">↗</b></a>
-      </div>
     </section>
 
     <section class="section" id="collection">
       <div class="section-title"><div><h2>Daily Essentials</h2><p>아침과 저녁, 매일 손이 가는 세 가지</p></div><button class="text-button" type="button" data-search>제품 검색 <span aria-hidden="true">↗</span></button></div>
       <div class="product-grid">
         <article id="serum" class="product">
-          <img loading="lazy" src="assets/images/serum.jpg" alt="올리브색 유리병에 담긴 그린 듀 세럼">
-          <h3>그린 듀 세럼</h3><p>가볍게 펴 바르는 워터리 세럼</p><small>30 mL</small>
+          <a class="product-link" href="moss-veil-serum.html">
+            <img loading="lazy" src="assets/images/moss-veil-serum.jpg" alt="이끼 위에 놓인 모스 베일 세럼">
+            <h3>모스 베일 세럼</h3>
+            <p>고요한 숲에서 영감을 받은 세럼</p>
+            <small>50 mL</small>
+          </a>
         </article>
         <article id="cream" class="product">
           <img loading="lazy" src="assets/images/cream.jpg" alt="버터 옐로 용기에 담긴 카렌듈라 소프트 크림">
@@ -117,6 +121,7 @@
         <p class="eyebrow">DESIGN PROCESS</p>
         <h2>제작 과정</h2>
         <p>메인 배너와 제품 섹션의 흐름을 잡고, 피그마에서 브랜드 홈페이지를 디자인했습니다. 데스크톱과 모바일 화면 크기에 맞춰 레이아웃이 자연스럽게 바뀌도록 반응형으로 퍼블리싱했습니다.</p>
+        <p>세럼 상세 페이지는 제품 이미지와 문구를 분리해 구성했습니다. 제품명과 설명은 HTML 텍스트로 작성하고, 화면 크기에 맞춰 글자 크기와 배치를 조정할 수 있도록 했습니다.</p>
       </div>
     </section>
 
